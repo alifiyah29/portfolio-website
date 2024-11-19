@@ -18,8 +18,10 @@ const Sidebar1: React.FC = () => {
           height={150}
           className="rounded-full mb-4"
         />
-        <h2 className="text-2xl font-bold text-white mb-2">Alifiyah Shahid</h2>
-        <p className="text-text-secondary mb-4 text-center">
+        <h2 className="text-2xl font-bold text-[#FFB300] mb-2">
+          Alifiyah Shahid
+        </h2>
+        <p className="mb-4 text-center text-[#4eabda]">
           Passionate Software Engineer and Web Developer
         </p>
         <Image
