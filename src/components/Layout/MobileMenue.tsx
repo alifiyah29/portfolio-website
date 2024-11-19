@@ -54,40 +54,35 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
         download
         className="block mt-8 bg-accent-teal text-black px-4 py-2 rounded-lg text-center"
       >
-        Download Resume
+        Download My Resume
       </a>
       <div className="mt-8 flex justify-center space-x-4">
         <a
-          href="https://linkedin.com/in/yourusername"
+          href="https://www.linkedin.com/in/alifiyahshahid/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image
-            src="/images/linkedin-icon.svg"
+            src="/images/linkedin.png"
             alt="LinkedIn"
             width={24}
             height={24}
           />
         </a>
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/alifiyah29"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            src="/images/github-icon.svg"
-            alt="GitHub"
-            width={24}
-            height={24}
-          />
+          <Image src="/images/github.png" alt="GitHub" width={24} height={24} />
         </a>
         <a
-          href="https://instagram.com/yourusername"
+          href="https://instagram.com/alifiyah_shahid/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image
-            src="/images/instagram-icon.svg"
+            src="/images/instagram.png"
             alt="Instagram"
             width={24}
             height={24}

@@ -27,7 +27,7 @@ const Skills: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="text-2xl font-bold mb-4 text-white">Skills</h2>
+      <h2 className="text-2xl font-bold mb-4 text-[#FFB300]">Skills</h2>
       {skillCategories.map((category, index) => (
         <motion.div
           key={index}

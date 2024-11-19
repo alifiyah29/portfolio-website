@@ -10,7 +10,7 @@ const Certifications: React.FC = () => {
       transition={{ duration: 0.5 }}
       className="text-center"
     >
-      <h2 className="text-2xl font-bold mb-4 text-white">Certifications</h2>
+      <h2 className="text-2xl font-bold mb-4 text-[#FFB300]">Certifications</h2>
       <div className="bg-section p-4 rounded-lg inline-block">
         <Image src="/images/aws-badge.png" alt="AWS Cloud Practitioner Certification" width={300} height={200} className="rounded-lg" />
         <p className="text-text-secondary mt-2">AWS Cloud Practitioner CLF C02</p>

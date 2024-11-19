@@ -8,7 +8,7 @@ const AboutMe: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="text-2xl font-bold mb-4 text-white">About Me</h2>
+      <h2 className="text-2xl font-bold mb-4 text-[#FFB300]">About Me</h2>
       <ul className="space-y-4 text-[#E0E0E0]">
         <li>
           <strong className="text-[#1DE9B6]">

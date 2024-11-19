@@ -15,7 +15,7 @@ const Hobbies: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="text-2xl font-bold mb-4 text-white">Hobbies</h2>
+      <h2 className="text-2xl font-bold mb-4 text-[#FFB300]">Hobbies</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {hobbies.map((hobby, index) => (
           <motion.div

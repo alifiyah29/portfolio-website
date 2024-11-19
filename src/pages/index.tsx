@@ -17,41 +17,32 @@ const AboutPage: NextPage = () => {
 
   const renderActiveSection = () => {
     switch (activeSection) {
-      case 'About Me':
-        return <AboutMe />;
-      case 'Education':
-        return <Education />;
-      case 'Experience':
-        return <Experience />;
-      case 'Recent Work':
-        return <RecentWork />;
-      case 'Skills':
-        return <Skills />;
-      case 'Hobbies':
-        return <Hobbies />;
-      case 'Achievements':
-        return <Achievements />;
-      case 'Certifications':
-        return <Certifications />;
-      default:
-        return <AboutMe />;
+      case 'About Me': return <AboutMe />;
+      case 'Education': return <Education />;
+      case 'Experience': return <Experience />;
+      case 'Recent Work': return <RecentWork />;
+      case 'Skills': return <Skills />;
+      case 'Hobbies': return <Hobbies />;
+      case 'Achievements': return <Achievements />;
+      case 'Certifications': return <Certifications />;
+      default: return <AboutMe />;
     }
   };
 
   return (
     <Layout>
       <div className="flex flex-col md:flex-row">
-        <div className="md:w-1/4 mb-4 md:mb-0">
-          <Sidebar2 setActiveSection={setActiveSection} />
-        </div>
         <motion.div 
-          className="md:w-3/4 bg-[#212121] p-6 rounded-lg"
+          className="md:w-3/4 bg-[#212121] p-6 rounded-lg mr-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           {renderActiveSection()}
         </motion.div>
+        <div className="md:w-1/4 mt-4 md:mt-0">
+          <Sidebar2 activeSection={activeSection} setActiveSection={setActiveSection} />
+        </div>
       </div>
     </Layout>
   );

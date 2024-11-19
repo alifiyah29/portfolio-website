@@ -44,12 +44,12 @@ const Sidebar1: React.FC = () => {
         </motion.a>
         <div className="flex space-x-4">
           <SocialIcon
-            href="https://linkedin.com/in/yourusername"
+            href="https://linkedin.com/in/alifiyahshahid/"
             icon="linkedin"
           />
-          <SocialIcon href="https://github.com/yourusername" icon="github" />
+          <SocialIcon href="https://github.com/alifiyah29" icon="github" />
           <SocialIcon
-            href="https://instagram.com/yourusername"
+            href="https://instagram.com/alifiyah_shahid/"
             icon="instagram"
           />
         </div>

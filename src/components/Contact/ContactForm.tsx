@@ -1,23 +1,45 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-    phone: '',
-    contactMethod: '',
+    name: "",
+    email: "",
+    message: "",
+    phone: "",
+    contactMethod: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission (e.g., send email using EmailJS)
-    console.log(formData);
+    try {
+      await emailjs.send(
+        "service_7nu57kn",
+        "template_px55uby",
+        formData,
+        "ORCDkb-QzLh9naqnF"
+      );
+      alert("Message sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+        phone: "",
+        contactMethod: "",
+      });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Failed to send message. Please try again.");
+    }
   };
 
   return (
@@ -29,7 +51,9 @@ const ContactForm: React.FC = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="mb-4">
-        <label htmlFor="name" className="block text-white mb-2">Name</label>
+        <label htmlFor="name" className="block text-white mb-2">
+          Name
+        </label>
         <input
           type="text"
           id="name"
@@ -41,7 +65,9 @@ const ContactForm: React.FC = () => {
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="email" className="block text-white mb-2">Email Address</label>
+        <label htmlFor="email" className="block text-white mb-2">
+          Email Address
+        </label>
         <input
           type="email"
           id="email"
@@ -53,7 +79,9 @@ const ContactForm: React.FC = () => {
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="phone" className="block text-white mb-2">Contact Number</label>
+        <label htmlFor="phone" className="block text-white mb-2">
+          Contact Number
+        </label>
         <input
           type="tel"
           id="phone"
@@ -64,7 +92,9 @@ const ContactForm: React.FC = () => {
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="contactMethod" className="block text-white mb-2">Preferred Contact Method</label>
+        <label htmlFor="contactMethod" className="block text-white mb-2">
+          Preferred Contact Method
+        </label>
         <select
           id="contactMethod"
           name="contactMethod"
@@ -80,7 +110,9 @@ const ContactForm: React.FC = () => {
         </select>
       </div>
       <div className="mb-4">
-        <label htmlFor="message" className="block text-white mb-2">Message</label>
+        <label htmlFor="message" className="block text-white mb-2">
+          Message
+        </label>
         <textarea
           id="message"
           name="message"

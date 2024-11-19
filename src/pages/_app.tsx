@@ -7,7 +7,3 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 export default MyApp;
 
-// 'service_7nu57kn',
-// 'template_px55uby',
-// formData,
-// 'ORCDkb-QzLh9naqnF'
