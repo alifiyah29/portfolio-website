@@ -50,7 +50,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
         </ul>
       </nav>
       <a
-        href="/resume.pdf"
+        href="/Alifiyah_Shahid_Resume.pdf"
         download
         className="block mt-8 bg-accent-teal text-black px-4 py-2 rounded-lg text-center"
       >

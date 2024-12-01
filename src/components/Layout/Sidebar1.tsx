@@ -36,7 +36,7 @@ const Sidebar1: React.FC = () => {
           cloud infrastructure, and DevOps.
         </p>
         <motion.a
-          href="/resume.pdf"
+          href="/Alifiyah_Shahid_Resume.pdf"
           download
           className="bg-accent-gold text-black px-4 py-2 rounded-lg mb-4"
           whileHover={{ scale: 1.05 }}
